@@ -1,0 +1,18 @@
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\bin\Debug\cha0s.exe.config
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\bin\Debug\cha0s.exe
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\bin\Debug\cha0s.pdb
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\obj\Debug\cha0s.csprojResolveAssemblyReference.cache
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\obj\Debug\cha0s.Form1.resources
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\obj\Debug\cha0s.Properties.Resources.resources
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\obj\Debug\cha0s.csproj.GenerateResource.Cache
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\obj\Debug\cha0s.exe
+c:\users\anton\onedrive\documenti\visual studio 2015\Projects\cha0s\cha0s\obj\Debug\cha0s.pdb
+D:\GitHub\aes256-filehandler\cha0s\bin\Debug\cha0s.exe.config
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.exe
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.pdb
+D:\GitHub\aes256-filehandler\cha0s\bin\Debug\cha0s.exe
+D:\GitHub\aes256-filehandler\cha0s\bin\Debug\cha0s.pdb
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.csprojResolveAssemblyReference.cache
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.MainForm.resources
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.Properties.Resources.resources
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.csproj.GenerateResource.Cache
