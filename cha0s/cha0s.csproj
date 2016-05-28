@@ -53,6 +53,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AEScryptdecryptutil.cs" />
+    <Compile Include="AreUSureC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AreUSureC.Designer.cs">
+      <DependentUpon>AreUSureC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AreUSureD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AreUSureD.Designer.cs">
+      <DependentUpon>AreUSureD.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +73,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AreUSureC.resx">
+      <DependentUpon>AreUSureC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AreUSureD.resx">
+      <DependentUpon>AreUSureD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -72,6 +90,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="f.ico" />
+    <None Include="Resources\f.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

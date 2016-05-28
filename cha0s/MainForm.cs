@@ -45,8 +45,19 @@ namespace cha0s
         {
             if (p1.Text != "" && t1.Text != "")
             {
-                AEScryptdecryptutil.EncryptFile(t1.Text, p1.Text);
-                MessageBox.Show("Done!");
+
+                DialogResult dr = new DialogResult();
+                AreYouUSureD form1 = new AreYouUSureD();
+                dr = form1.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    AEScryptdecryptutil.EncryptFile(t1.Text, p1.Text);
+                    //MessageBox.Show("Done!");
+                }
+                else if (dr == DialogResult.Cancel)
+                { }
+                
+                
             }
             else MessageBox.Show("Please fill all fields!");
         }
@@ -55,8 +66,15 @@ namespace cha0s
         {
             if (p2.Text != "" && t2.Text != "")
             {
-                AEScryptdecryptutil.DecryptFile(t2.Text, p2.Text);
-                MessageBox.Show("Done!");
+                DialogResult dr = new DialogResult();
+                AreYouSureD form2 = new AreYouSureD();
+                dr = form2.ShowDialog();
+                if (dr == DialogResult.OK)
+                {
+                    AEScryptdecryptutil.DecryptFile(t2.Text, p2.Text);
+                    //MessageBox.Show("Done!");
+                }
+                else { }
             }
             else MessageBox.Show("Please fill all fields!");
         }

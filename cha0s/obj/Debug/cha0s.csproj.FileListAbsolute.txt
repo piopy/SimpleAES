@@ -12,7 +12,8 @@ D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.exe
 D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.pdb
 D:\GitHub\aes256-filehandler\cha0s\bin\Debug\cha0s.exe
 D:\GitHub\aes256-filehandler\cha0s\bin\Debug\cha0s.pdb
-D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.csprojResolveAssemblyReference.cache
 D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.MainForm.resources
 D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.Properties.Resources.resources
 D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.csproj.GenerateResource.Cache
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.AreYouUSureD.resources
+D:\GitHub\aes256-filehandler\cha0s\obj\Debug\cha0s.AreYouSureD.resources
