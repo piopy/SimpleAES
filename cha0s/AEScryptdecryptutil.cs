@@ -26,17 +26,18 @@ namespace cha0s
             path = Path.GetDirectoryName(path)+"\\Crypted\\" +Path.GetFileName(path);
 
             File.WriteAllBytes(path, encrypted_bytes);
-            MessageBox.Show("Encryption Successful");
+            //MessageBox.Show("Encryption Successful");
         }
 
-        public static void DecryptFile(string source, string password)
+        public static bool DecryptFile(string source, string password)
         {
             string path = source;
             if (!System.IO.File.Exists(path))
             {
                 Console.WriteLine("No Such File");
                 MessageBox.Show("No Such File");
-                return;
+                throw new UnauthorizedAccessException();
+
             }
 
             byte[] bytes = File.ReadAllBytes(path);
@@ -49,7 +50,8 @@ namespace cha0s
             {
                 Console.WriteLine("Incorrect password");
                 MessageBox.Show("Incorrect password");
-                return;
+                throw new UnauthorizedAccessException();
+                
             }
 
             string tempF = Path.GetDirectoryName(source) + "\\Decrypted";
@@ -65,7 +67,8 @@ namespace cha0s
 
             File.WriteAllBytes(path, decrypted_bytes);
             Console.WriteLine("Decryption Successful");
-            MessageBox.Show("Decryption Successful");
+            return true;
+            //MessageBox.Show("Decryption Successful");
         }
 
         public static byte[] Encrypt(byte[] data, string password)

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,6 +13,9 @@ namespace cha0s
 {
     public partial class MainForm : Form
     {
+        string[] tempE;
+        string[] tempD;
+
         public MainForm()
         {
             InitializeComponent();
@@ -20,24 +24,34 @@ namespace cha0s
         private void button2_Click(object sender, EventArgs e)
         {
             OpenFileDialog result = new OpenFileDialog();
-
+            result.Multiselect = true;
             if (result.ShowDialog() == DialogResult.OK)
             {
                 p1.Enabled = true;
                 t1.Text = "";
-                t1.Text = result.FileName;
+                tempE = result.FileNames;
+                foreach(string s in tempE)
+                {
+                    t1.Text += "\""+Path.GetFileName(s)+"\" ";
+                }
+                
             }
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             OpenFileDialog result = new OpenFileDialog();
+            result.Multiselect = true;
 
             if (result.ShowDialog() == DialogResult.OK)
             {
                 p2.Enabled = true;
                 t2.Text = "";
-                t2.Text = result.FileName;
+                tempD = result.FileNames;
+                foreach (string s in tempD)
+                {
+                    t2.Text += "\"" + Path.GetFileName(s) + "\" ";
+                }
             }
         }
 
@@ -51,8 +65,12 @@ namespace cha0s
                 dr = form1.ShowDialog();
                 if (dr == DialogResult.OK)
                 {
-                    AEScryptdecryptutil.EncryptFile(t1.Text, p1.Text);
-                    //MessageBox.Show("Done!");
+                    foreach (string s in tempE)
+                    {
+                        AEScryptdecryptutil.EncryptFile(s, p1.Text);
+                    }
+
+                    MessageBox.Show("Encryption Succesful!");
                 }
                 else if (dr == DialogResult.Cancel)
                 { }
@@ -69,10 +87,22 @@ namespace cha0s
                 DialogResult dr = new DialogResult();
                 AreYouSureD form2 = new AreYouSureD();
                 dr = form2.ShowDialog();
+                bool control=false;
                 if (dr == DialogResult.OK)
                 {
-                    AEScryptdecryptutil.DecryptFile(t2.Text, p2.Text);
-                    //MessageBox.Show("Done!");
+                    foreach (string s in tempD)
+                    {
+
+                        try { control = AEScryptdecryptutil.DecryptFile(s, p2.Text); }
+                        catch(UnauthorizedAccessException e1)
+                        {
+                            control = false;
+
+                            if (Directory.Exists(Path.GetDirectoryName(s) + "\\Decrypted")) Directory.Delete(Path.GetDirectoryName(s) + "\\Decrypted", true);
+                        }
+                        if (control == false) break;
+                    }
+                    if (control == true) MessageBox.Show("Decryption Succesful!");
                 }
                 else { }
             }
