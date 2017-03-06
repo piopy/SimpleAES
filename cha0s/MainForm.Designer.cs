@@ -30,11 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.t1 = new System.Windows.Forms.TextBox();
-            this.cry = new System.Windows.Forms.Button();
-            this.p1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.b1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.p1 = new System.Windows.Forms.TextBox();
+            this.cry = new System.Windows.Forms.Button();
+            this.t1 = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.b2 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
@@ -60,13 +60,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Crypt";
             // 
-            // t1
+            // b1
             // 
-            this.t1.Enabled = false;
-            this.t1.Location = new System.Drawing.Point(6, 19);
-            this.t1.Name = "t1";
-            this.t1.Size = new System.Drawing.Size(212, 20);
-            this.t1.TabIndex = 0;
+            this.b1.Location = new System.Drawing.Point(224, 18);
+            this.b1.Name = "b1";
+            this.b1.Size = new System.Drawing.Size(32, 23);
+            this.b1.TabIndex = 4;
+            this.b1.Text = "...";
+            this.b1.UseVisualStyleBackColor = true;
+            this.b1.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(286, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Password";
+            // 
+            // p1
+            // 
+            this.p1.Enabled = false;
+            this.p1.Location = new System.Drawing.Point(345, 19);
+            this.p1.Name = "p1";
+            this.p1.Size = new System.Drawing.Size(120, 20);
+            this.p1.TabIndex = 2;
+            this.p1.UseSystemPasswordChar = true;
             // 
             // cry
             // 
@@ -78,33 +98,13 @@
             this.cry.UseVisualStyleBackColor = true;
             this.cry.Click += new System.EventHandler(this.button1_Click);
             // 
-            // p1
+            // t1
             // 
-            this.p1.Enabled = false;
-            this.p1.Location = new System.Drawing.Point(345, 19);
-            this.p1.Name = "p1";
-            this.p1.Size = new System.Drawing.Size(120, 20);
-            this.p1.TabIndex = 2;
-            this.p1.UseSystemPasswordChar = true;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(286, 22);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 13);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "Password";
-            // 
-            // b1
-            // 
-            this.b1.Location = new System.Drawing.Point(224, 18);
-            this.b1.Name = "b1";
-            this.b1.Size = new System.Drawing.Size(32, 23);
-            this.b1.TabIndex = 4;
-            this.b1.Text = "...";
-            this.b1.UseVisualStyleBackColor = true;
-            this.b1.Click += new System.EventHandler(this.button2_Click);
+            this.t1.Enabled = false;
+            this.t1.Location = new System.Drawing.Point(6, 19);
+            this.t1.Name = "t1";
+            this.t1.Size = new System.Drawing.Size(212, 20);
+            this.t1.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -177,7 +177,7 @@
             this.linkLabel1.Text = "by BurningHAM, Copyright 2016, GPL License";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,8 +189,9 @@
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(600, 202);
             this.MinimumSize = new System.Drawing.Size(600, 202);
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.Text = "cha0s";
+            this.Load += new System.EventHandler(this.onload);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

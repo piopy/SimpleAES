@@ -12,7 +12,7 @@ namespace cha0s
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>
         [STAThread]
-        static void Main()
+        static void Main(string[] argument)
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

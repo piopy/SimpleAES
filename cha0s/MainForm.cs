@@ -113,5 +113,37 @@ namespace cha0s
         {
             System.Diagnostics.Process.Start("https://github.com/BurningHAM18");
         }
+
+        private void onload(object sender, EventArgs e)
+        {
+           
+            String[] argument = Environment.GetCommandLineArgs();
+            try
+            {
+                if (argument[1] == null)
+                {
+                    
+                }
+                else
+                {
+                    tempE = new String[1];
+                    tempD = new String[1];
+                    tempE[0] = argument[1];
+                    tempD[0] = argument[1];
+
+                    t1.Text = Path.GetFileName(argument[1]);
+                    t2.Text = Path.GetFileName(argument[1]);
+
+                    p1.Enabled = true;
+                    p2.Enabled = true;
+
+                }
+            }
+            catch (Exception e8)
+            {
+                // iolo
+            }
+        
+        }
     }
 }
