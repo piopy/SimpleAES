@@ -2,7 +2,7 @@
 
 ### DESCRIPTION 
 
-Another simple AES file encryptor
+Another simple AES file encryptor w/ 256bit password generator / DiceWare password generator
 
 p.s. i am NOT responsible for any damages or data loss.
 
