@@ -1,4 +1,4 @@
-# aes256-filehandler
+# SimpleAES
 
 ### DESCRIPTION 
 
@@ -8,7 +8,7 @@ p.s. i am NOT responsible for any damages or data loss.
 
 ### INSTALL AND USE IT
 
-- Download the last release from [here](https://github.com/BurningHAM18/aes256-filehandler).
+- Download the last release from [here](https://github.com/BurningHAM18/SimpleAES).
 - Unzip and run 
 `
 Program/SimpleAES.exe
